@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pakar THT</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <h1>Sistem Pakar THT</h1>
+    <hr>
+    <div class="container border border-warning">
+    <label for="penyakit">Pilih Nama Penyakit:</label>
+    <select id="penyakit" onchange="tampilkanGejala()">
+        <option value="">-- Pilih Penyakit --</option>
+        <option value="CONTRACT ULCERS">CONTRACT ULCERS</option>
+        <option value="ABAES PARAFARINGEAL">ABAES PARAFARINGEAL</option>
+        <!-- Tambahkan opsi untuk nama penyakit lainnya  -->
+    </select>
+    <div id="gejala" style="display: none;">
+        <h2>Gejala yang Dialami:</h2>
+        <p id="gejalaText"></p>
+    </div>
+</div>
+<hr>
+<hr>
+
+<form id="diagnosaForm">
+    <div class="container">
+        <h2>Silakan Mencari Nama Penyakit Berdasarkan Gangguan Gejala:</h2>
+        <div class="row">
+            <div class="col">
+                <input type="checkbox" name="gejala" value="1" onclick="toggleCheckbox(this)">
+                <ul>
+                    <li>Nyeri saat bicara atau menelan</li>
+                    <li>Suara serak</li>
+                </ul>
+            </div>
+            <div class="col">
+                <input type="checkbox" name="gejala" value="2" onclick="toggleCheckbox(this)">
+                <ul>
+                    <li>nyeri saat bicara atau menelan</li>
+                    <li>leher bengkak</li>
+                </ul>
+            </div>
+            <div class="col">
+                Column // tambai dwek sesuai di excel eee
+            </div>
+        </div>
+        <button type="button" onclick="diagnosa()">Diagnosa</button>
+    </div>
+</form>
+<div id="hasilDiagnosa" style="display: none;" class="container">
+    <h2>Hasil Diagnosa:</h2>
+    <p id="hasilText"></p>
+</div>
+    <script src="pilihPenyakit.js"></script>
+    <script src="gangguanGejala.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
